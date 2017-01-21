@@ -25,3 +25,5 @@ before_script:
   - sleep 3
 script:
   - npm run ci:travis
+after_success:
+  firebase deploy --email ${FIREBASE_USERNAME} --password ${FIREBASE_PASSWORD}
