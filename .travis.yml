@@ -25,6 +25,6 @@ before_script:
   - sleep 3
 script:
 #  - npm run ci:travis
-   - npm rum build:prod
+   - npm build:prod
 after_success:
   - firebase deploy --tokken ${FIREBASE_TOKEN}
