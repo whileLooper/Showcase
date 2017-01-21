@@ -7,9 +7,9 @@ Tech stack
 - [ ] Bootstrap 4 / Material Design for Angular 2
 - [ ] Google Firebase
 - [ ] Charting Libraries (Chart.js, D3, C3, Flot, etc...)
-- [ ] Third party authentication
+- [ ] Third party authenticationg
 - [ ] Chatting function
-- etc
+- [ ] ...
 
 # Angular 2
 
