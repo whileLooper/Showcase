@@ -1,7 +1,7 @@
 # Showcase
 Personal website for showcases
 
-# Angular2
+# Angular 2
 
 # Google Firebase
 
