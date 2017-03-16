@@ -4,7 +4,7 @@
 <md-menu #menu="mdMenu">
   <button md-menu-item>
     <md-icon>show_chart</md-icon>
-    <span>Charts</span>
+    <span class="text-info">Charts</span>
   </button>
   <button md-menu-item>
     <md-icon>photo</md-icon>
@@ -19,3 +19,7 @@
     <span>About</span>
   </button>
 </md-menu>
+
+<div *ngFor="let item of data">
+  <input type="" name="" #input placeholder="{{item.$value}}" (keyup.enter)="setValue(input.value)">
+</div>

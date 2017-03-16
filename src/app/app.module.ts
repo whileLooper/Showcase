@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
+import { AngularFireModule } from 'angularfire2';
 import 'hammerjs';
 
 import {
@@ -47,6 +48,17 @@ type StoreType = {
   disposeOldHosts: () => void
 };
 
+
+// firebaseConfig setting
+// Must export the config
+export const firebaseConfig = {
+  apiKey: 'AIzaSyCRuMOJXpbDrQotYP6-anTRL7ZqUqNzqJE',
+  authDomain: 'showcase-6ed34.firebaseapp.com',
+  databaseURL: 'https://showcase-6ed34.firebaseio.com',
+  storageBucket: 'showcase-6ed34.appspot.com',
+  messagingSenderId: '54277616723'
+};
+
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
@@ -57,14 +69,15 @@ type StoreType = {
     AboutComponent,
     HomeComponent,
     NoContentComponent,
-    XLargeDirective,
+    XLargeDirective
   ],
   imports: [ // import Angular's modules
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
